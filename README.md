@@ -1,9 +1,9 @@
-**<font color=red>[ 如果您是中国人，请前往[简体中文版](http://docs.chengcheng0v0.cc/)。 ]</font>**
+**<font color=red>[ 如果您是中国人，我们建议您前往[简体中文版](http://docs.chengcheng0v0.cc/)。 ]</font>**
 
 # Document navigation
 **This is a document navigation, you can click the link below to quickly navigate to the corresponding document.**
 
-There is no documentation yet, you can visit [blog](http://chengcheng0v0.cc/).
+There is no documentation yet, you can visit [my blog](http://chengcheng0v0.cc/).
 
 * * *
 

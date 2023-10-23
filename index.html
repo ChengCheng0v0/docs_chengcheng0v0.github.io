@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChMail</title>
+    <!-- 引入 Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- 引入 Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- 引入 Typed.js -->
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js"></script>
+    <!-- 引入 Hint.css -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/hint.css/2.7.0/hint.css">
+    <!-- 引入 FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- 引入 CSS 代码 -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- 引入前端 JavaScript 代码 -->
+    <script src="./js/main.js"></script>
+    <!-- 引入后端请求 JavaScript 代码 -->
+    <script src="./js/request.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="center">
+            <a href="#index" class="link" draggable="false"><img src="./images/logo.svg" alt="Logo"></a>
+            <div class="links">
+                <button class="closemenu"><span class="l"></span><span class="r"></span></button>
+                <a href="#index" class="link" draggable="false">首页</a>
+                <a href="#introduce" class="link" draggable="false">介绍</a>
+                <a href="#price" class="link" draggable="false">价格</a>
+                <a href="#start" class="link" draggable="false">开始</a>
+                <a onclick="showPopup()" class="link-account" draggable="false"><i class="fa fa-user"></i> 用户中心</a>
+                <!-- Mobile Menu -->
+                <p class="link-account-menu">----------</p>
+                <a href="https://account.chmail.fun" target="_blank" class="link-account-menu"
+                    draggable="false">用户中心</a>
+                <a href="https://e.chmail.fun" target="_blank" class="link-account-menu" draggable="false">Web 邮箱</a>
+                <a href="https://support.chmail.fun" target="_blank" class="link-account-menu"
+                    draggable="false">工单系统</a>
+            </div>
+            <button class="openmenu"><span></span><span></span><span></span></button>
+            <div class="menubg"></div>
+        </div>
+    </div>
+    <div class="page">
+        <section class="index" id="index">
+            <div class="title-container">
+                <h1 class="title">ChMail@<span id="typed-text-title"></span></h1>
+                <p class="subtitle">以非常便宜的价格获得一个好看易记的邮件地址！</p>
+                <span class="hint--left" aria-label="点我~">
+                    <p class="subtitle-2">🎁[ 限时赠送 omoe.ink (欧萌) 邮箱 ]🎁</p>
+                </span>
+                <div class="title-button-container">
+                    <span class="hint--bottom" aria-label="别着急呀亲，确定不看看介绍吗？">
+                        <button onclick="startButton()" class="button button-start">立即购买</button>
+                    </span>
+                    <button onclick="introduceButton()" class="button button-introduce">查看详情</button>
+                </div>
+            </div>
+            <div class="scroll-indicator"><a onclick="introduceButton()"><i class="fa fa-chevron-down"
+                        style="color: lightseagreen;"></i></a></div>
+        </section>
+
+        <section class="introduce" id="introduce">
+            <div class="advantage-container">
+                <a onclick="">
+                    <div class="contentbox">
+                        <h2>标题</h2>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </a>
+
+                <a onclick="">
+                    <div class="contentbox">
+                        <h2>标题</h2>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </a>
+
+                <a onclick="">
+                    <div class="contentbox">
+                        <h2>标题</h2>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </a>
+
+                <a onclick="">
+                    <div class="contentbox">
+                        <h2>标题</h2>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </a>
+
+                <a onclick="">
+                    <div class="contentbox">
+                        <h2>标题</h2>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </a>
+
+                <a onclick="">
+                    <div class="contentbox">
+                        <h2>标题</h2>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- <ul class="introduce-container">
+                <li>
+                    <input type="radio" name="accordion" id="1st" checked>
+                    <label for="1st">详细信息</label>
+
+                    <div class="content">
+                        <p>
+                            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="2ed">
+                    <label for="2ed">更多介绍</label>
+
+                    <div class="content">
+                        <p>
+                            点击发送按钮后我们会向您填写的邮箱发送一封测试邮件，您可以使用此功能测试您的邮箱能否正常接收ChMail发送的邮件，或ChMail发送的邮件会不会被视为垃圾邮件，请根据测试结果自行决定是否购买。
+                            <br><br>
+                            发件邮箱：test@omoe.ink
+                            <br>
+                            收件邮箱：
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="3rd">
+                    <label for="3rd">?</label>
+
+                    <div class="content">
+                        <p>
+                            ?
+                        </p>
+                    </div>
+                </li>
+            </ul> -->
+        </section>
+
+        <section class="price" id="price">
+            <h1>Price</h1>
+        </section>
+
+        <section class="start" id="start">
+            <h1>Start</h1>
+        </section>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+    <div class="popup" id="popup">
+        <p style="text-align: center; margin-bottom: 12px;">Where are you going?</p>
+        <div style="display: flex; justify-content: center;">
+            <span class="hint--bottom" aria-label="管理您的账号">
+                <a href="https://account.chmail.fun" target="_blank" class="popup-button" draggable="false"><i
+                        class="fa fa-user"></i> 用户中心</a>
+            </span>
+            <span class="hint--bottom" aria-label="您可以在这里发送和查看邮件">
+                <a href="https://e.chmail.fun" target="_blank" class="popup-button" draggable="false"><i
+                        class="fa fa-envelope"></i> Web 邮箱</a>
+            </span>
+            <span class="hint--bottom" aria-label="您可以在这里联系客服或反馈问题">
+                <a href="https://support.chmail.fun" target="_blank" class="popup-button" draggable="false"><i
+                        class="fa fa-paper-plane"></i> 工单系统</a>
+            </span>
+        </div>
+        <!-- <p class="popup-info">没有账号？立即购买！</p> -->
+        <div class="popup-divider"></div>
+        <button class="popup-button-ok" id="popup-button-ok" onclick="hidePopup()">返回</button>
+    </div>
+
+    <script>
+        // 自适应菜单
+        var openMenuButton = document.querySelector(".openmenu");
+        var closeMenuButton = document.querySelector(".closemenu");
+        var menuContainer = document.querySelector(".center");
+        openMenuButton.addEventListener("click", function () {
+            menuContainer.classList.add("menuopen");
+        });
+        closeMenuButton.addEventListener("click", function () {
+            menuContainer.classList.remove("menuopen");
+        });
+
+        // 标题打字效果
+        var title = document.getElementById('typed-text-title');
+        new Typed(title, {
+            strings: ['kawaii.fans', 'otaku.fans', 'nyan.fans', 'ikun.fit', '114514.red', 'omoe.ink', 'qwq.email', 'qwq.fund'],
+            typeSpeed: 100, // 打印每个字的间隔时间
+            loop: true,
+            loopCount: Infinity,
+        });
+    </script>
+</body>
+
+</html>

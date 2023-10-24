@@ -57,6 +57,12 @@
 							<div class="turnstile" id="turnstile"></div>
 						</div>
 
+						<div class="w-100 text-center">
+							<div class="prompt" id="prompt">
+								<p style="border-style:solid; border-width:medium;">Test</p>
+							</div>
+						</div>
+
 						<script>
 							turnstile.ready(function () {
 								turnstile.render('#turnstile', {
@@ -65,6 +71,20 @@
 										console.log(`Challenge Success ${token}`);
 									},
 								});
+
+								// 验证码加载成功后隐藏提示
+								var promptDiv = document.querySelector(".prompt");
+								if (promptDiv) {
+									promptDiv.style.display = "none";
+								}
+							});
+
+							// 在验证码未加载时显示提示
+							window.addEventListener("load", function () {
+								var promptDiv = document.querySelector(".prompt");
+								if (promptDiv) {
+									promptDiv.style.display = "block";
+								}
 							});
 						</script>
 
